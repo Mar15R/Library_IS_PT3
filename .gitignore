@@ -16,7 +16,7 @@
 /Library_IS/obj/Debug/Library_IS.exe
 /Library_IS/obj/Debug/Library_IS.pdb
 .vs/Library_IS/v17/DocumentLayout.backup.json
-/Library_IS/obj/Debug/Library_IS.exe.config
+Library_IS/obj/Debug/Library_IS.exe.config
 .vs/Library_IS/CopilotIndices/17.14.1679.25730/SemanticSymbols.db
 .vs/Library_IS/CopilotIndices/17.14.1679.25730/CodeChunks.db
 .vs/Library_IS/CopilotIndices/17.14.1679.25730/CodeChunks.db-shm
@@ -24,4 +24,4 @@
 .vs/Library_IS/CopilotIndices/17.14.1679.25730/SemanticSymbols.db-shm
 .vs/Library_IS/CopilotIndices/17.14.1679.25730/SemanticSymbols.db-wal
 /Library_IS/App.config
-/Library_IS/bin/Debug/Library_IS.exe.config
+Library_IS/bin/Debug/Library_IS.exe.config
