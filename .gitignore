@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Library_IS/CopilotIndices/17.14.1601.40145
+/.vs/Library_IS/FileContentIndex
+/.vs/Library_IS/v17/.suo
+/.vs/Library_IS/v17/DocumentLayout.json
+/Library_IS/bin/Debug/Library_IS.exe
+/Library_IS/bin/Debug/Library_IS.pdb
+/Library_IS/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Library_IS/obj/Debug/Library_IS.csproj.AssemblyReference.cache
+/Library_IS/obj/Debug/Library_IS.csproj.CoreCompileInputs.cache
+/Library_IS/obj/Debug/Library_IS.csproj.FileListAbsolute.txt
+/Library_IS/obj/Debug/Library_IS.csproj.GenerateResource.cache
+/Library_IS/obj/Debug/Library_IS.exe
+/Library_IS/obj/Debug/Library_IS.pdb
