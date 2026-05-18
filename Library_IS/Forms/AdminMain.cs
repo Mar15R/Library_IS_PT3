@@ -23,19 +23,24 @@ namespace Library_IS.Forms
             InitializeComponent();
         }
 
-        //private void ReloadBooks()
-        //{
-        //    List<GridAction> gridActions = new List<GridAction>
-        //    {
-        //        new GridAction { Name = "btnDelete", Text = "Delete" },
-        //        new GridAction { Name = "btnUpdate", Text = "Update" }
-        //    };
-        //    helper.ReloadGrid(gv_Books, factory.GetBookViews(), new List<int> { 0 }, gridActions);
-        //}
+        private void ReloadBooks()
+        {
+            //List<GridAction> gridActions = new List<GridAction>
+            //{
+            //    new GridAction { Name = "btnDelete", Text = "Delete" },
+            //    new GridAction { Name = "btnUpdate", Text = "Update" }
+            //};
+            helper.ReloadGrid(gv_Books, factory.GetAllBooks(), new List<int> { 0 }, false, false);
+        }
 
         private void AdminMain_Load(object sender, EventArgs e)
         {
-            //ReloadBooks();
+            ReloadBooks();
+        }
+
+        private void AdminMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

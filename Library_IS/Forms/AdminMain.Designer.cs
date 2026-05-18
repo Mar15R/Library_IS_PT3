@@ -61,6 +61,7 @@
             this.Controls.Add(this.gv_Books);
             this.Name = "AdminMain";
             this.Text = "Admin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminMain_FormClosing);
             this.Load += new System.EventHandler(this.AdminMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_Books)).EndInit();
             this.ResumeLayout(false);
