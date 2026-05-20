@@ -110,6 +110,31 @@ namespace Library_IS.Lib
             }
             catch { throw; }
         }
+
+        public List<BookView> GetAllBooks()
+        {
+            try
+            {
+                return repo.GetEntities<Book>().Select(b => new BookView
+                {
+                    ID_Book = b.ID_Book,
+                    Book_Name = b.Book_Name,
+                    ISBN = b.ISBN,
+                    Year = b.Year,
+                    AuthorFullName = $"{b.Author?.Name} {b.Author?.Surname}"
+                }).ToList();
+            }
+            catch { throw; }
+        }
+
+        public bool DeleteBook(long bookId)
+        {
+            try
+            {
+                return repo.DeleteEntityById<Book>(bookId);
+            }
+            catch { throw; }
+        }
     }
   
 

@@ -102,5 +102,10 @@ namespace Library_IS.Forms
             }
 
         }
+
+        private void UserMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

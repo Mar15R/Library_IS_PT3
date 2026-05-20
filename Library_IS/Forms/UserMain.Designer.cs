@@ -65,6 +65,7 @@
             this.Controls.Add(this.gv_AvailableBooks);
             this.Name = "UserMain";
             this.Text = "UserMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserMain_FormClosing);
             this.Load += new System.EventHandler(this.UserMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_AvailableBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_TakenBooks)).EndInit();

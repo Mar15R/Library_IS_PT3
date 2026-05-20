@@ -42,6 +42,7 @@
             this.gv_Books.RowTemplate.Height = 24;
             this.gv_Books.Size = new System.Drawing.Size(1096, 288);
             this.gv_Books.TabIndex = 0;
+            this.gv_Books.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_Books_CellContentClick);
             // 
             // btn_AddBook
             // 
@@ -61,6 +62,7 @@
             this.Controls.Add(this.gv_Books);
             this.Name = "AdminMain";
             this.Text = "Admin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminMain_FormClosing);
             this.Load += new System.EventHandler(this.AdminMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_Books)).EndInit();
             this.ResumeLayout(false);

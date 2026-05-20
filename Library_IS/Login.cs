@@ -42,8 +42,8 @@ namespace Library_IS
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            string userName = txt_Username.Text;
-            string password = txt_Password.Text;
+            string userName = txt_Username.Text.Trim();
+            string password = txt_Password.Text.Trim();
 
 
             if (userName != "" && password != "")
@@ -89,7 +89,7 @@ namespace Library_IS
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txt_Username.Text = "KarlisO";
+            txt_Username.Text = "MarisR";
             txt_Password.Text = "Parole123";
 
         }
