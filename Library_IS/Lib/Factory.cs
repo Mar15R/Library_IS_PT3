@@ -158,6 +158,19 @@ namespace Library_IS.Lib
             }
             catch { throw; }
         }
+        public bool UpdateBook(long bookId, string bookName, string isbn, short year, long authorId)
+        {
+            try
+            {
+                Book book = repo.GetEntityById<Book>(bookId);
+                book.Book_Name = bookName;
+                book.ISBN = isbn;
+                book.Year = year;
+                book.ID_Author = authorId;
+                return repo.UpdateEntity(book);
+            }
+            catch { throw; }
+        }
     }
   
 

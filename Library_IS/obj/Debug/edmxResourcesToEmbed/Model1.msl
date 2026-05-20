@@ -4,50 +4,50 @@
     <EntitySetMapping Name="Author">
       <EntityTypeMapping TypeName="LibraryModel.Author">
         <MappingFragment StoreEntitySet="Author">
-          <ScalarProperty Name="ID_Author" ColumnName="ID_Author" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_Author" ColumnName="ID_Author" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Book">
       <EntityTypeMapping TypeName="LibraryModel.Book">
         <MappingFragment StoreEntitySet="Book">
-          <ScalarProperty Name="ID_Book" ColumnName="ID_Book" />
-          <ScalarProperty Name="Book_Name" ColumnName="Book_Name" />
-          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
-          <ScalarProperty Name="Year" ColumnName="Year" />
           <ScalarProperty Name="ID_Author" ColumnName="ID_Author" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Book_Name" ColumnName="Book_Name" />
+          <ScalarProperty Name="ID_Book" ColumnName="ID_Book" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="LibraryModel.User">
         <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Surname" ColumnName="Surname" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Role" ColumnName="Role" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserBook">
       <EntityTypeMapping TypeName="LibraryModel.UserBook">
         <MappingFragment StoreEntitySet="UserBook">
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="Id_Book" ColumnName="Id_Book" />
           <ScalarProperty Name="PickDate" ColumnName="PickDate" />
+          <ScalarProperty Name="Id_Book" ColumnName="Id_Book" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserRole">
       <EntityTypeMapping TypeName="LibraryModel.UserRole">
         <MappingFragment StoreEntitySet="UserRole">
-          <ScalarProperty Name="Role" ColumnName="Role" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

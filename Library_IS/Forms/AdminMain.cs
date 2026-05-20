@@ -66,13 +66,21 @@ namespace Library_IS.Forms
                             }
                         }
                     }
+                    else if (e.ColumnIndex == gv_Books.Columns["btnUpdate"].Index)
+                    {
+                        using (BookMng popup = new BookMng(book))
+                        {
+                            popup.StartPosition = FormStartPosition.CenterParent;
+                            popup.ShowDialog();
+                            ReloadBooks();
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
-
         }
 
         private void btn_AddBook_Click(object sender, EventArgs e)

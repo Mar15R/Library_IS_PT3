@@ -70,7 +70,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_UserBook_Book">
-    <End Role="Book" Type="Self.Book" Multiplicity="1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="UserBook" Type="Self.UserBook" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Book">
