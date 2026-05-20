@@ -135,6 +135,19 @@ namespace Library_IS.Lib
             }
             catch { throw; }
         }
+
+        public List<AuthorView> GetAllAuthors()
+        {
+            try
+            {
+                return repo.GetEntities<Author>().Select(a => new AuthorView
+                {
+                    ID_Author = a.ID_Author,
+                    FullName = $"{a.Name} {a.Surname}"
+                }).ToList();
+            }
+            catch { throw; }
+        }
     }
   
 

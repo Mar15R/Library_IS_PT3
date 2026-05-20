@@ -64,6 +64,12 @@
     <Compile Include="Book.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BookMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookMng.Designer.cs">
+      <DependentUpon>BookMng.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,9 +126,13 @@
     <Compile Include="UserRole.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Views\AuthorView.cs" />
     <Compile Include="Views\BookView.cs" />
     <EmbeddedResource Include="Forms\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookMng.resx">
+      <DependentUpon>BookMng.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserMain.resx">
       <DependentUpon>UserMain.cs</DependentUpon>

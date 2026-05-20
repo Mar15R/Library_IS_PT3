@@ -74,5 +74,24 @@ namespace Library_IS.Forms
             }
 
         }
+
+        private void btn_AddBook_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                using (BookMng popup = new BookMng())
+                {
+                    popup.StartPosition = FormStartPosition.CenterParent;
+                    popup.ShowDialog();
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
