@@ -14,9 +14,13 @@ namespace Library_IS.Forms
     public partial class BookMng : Form
     {
         Factory factory = new Factory();
-        public BookMng()
+        Validation validation = new Validation();
+        private long? bookId;
+
+        public BookMng(long? _bookId)
         {
             InitializeComponent();
+            bookId = _bookId;
         }
 
         private void BookMng_Load(object sender, EventArgs e)
@@ -32,6 +36,13 @@ namespace Library_IS.Forms
             string isbn = txt_Isbn.Text;
             //int year = int.TryParse(txt_Year.Text, out int parsedYear) ? parsedYear : 0;//ja tryparse nenostrādā, tad year būs 0
             int.TryParse(txt_Year.Text, out int year);
+
+            if (!validation.IsYearValid(year))
+            {
+                lbl_Error.Text = "Please enter a valid year.";
+                return;//aptur koda AddBook_click funkcionalitāti, ja gads nav derīgs
+            }
+
             long authorId = (long)cb_SelectAuthor.SelectedValue;
 
             Book book = new Book
@@ -42,7 +53,21 @@ namespace Library_IS.Forms
                 ID_Author = authorId
             };
 
-            factory.AddBook(book);
+            if (bookId != null)
+            {
+                book.ID_Book = (long)bookId;
+                if (factory.UpdateBook(book))
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+            }
+            else
+            {
+                if (factory.AddBook(book))
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+            }
 
             this.Close();
         }

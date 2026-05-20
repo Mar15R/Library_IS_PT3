@@ -37,6 +37,7 @@
             this.txt_Year = new System.Windows.Forms.TextBox();
             this.cb_SelectAuthor = new System.Windows.Forms.ComboBox();
             this.bnt_AddBook = new System.Windows.Forms.Button();
+            this.lbl_Error = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -76,7 +77,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 161);
+            this.label4.Location = new System.Drawing.Point(19, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 4;
@@ -99,14 +100,14 @@
             // cb_SelectAuthor
             // 
             this.cb_SelectAuthor.FormattingEnabled = true;
-            this.cb_SelectAuthor.Location = new System.Drawing.Point(127, 158);
+            this.cb_SelectAuthor.Location = new System.Drawing.Point(127, 150);
             this.cb_SelectAuthor.Name = "cb_SelectAuthor";
             this.cb_SelectAuthor.Size = new System.Drawing.Size(288, 24);
             this.cb_SelectAuthor.TabIndex = 8;
             // 
             // bnt_AddBook
             // 
-            this.bnt_AddBook.Location = new System.Drawing.Point(24, 209);
+            this.bnt_AddBook.Location = new System.Drawing.Point(22, 227);
             this.bnt_AddBook.Name = "bnt_AddBook";
             this.bnt_AddBook.Size = new System.Drawing.Size(419, 32);
             this.bnt_AddBook.TabIndex = 9;
@@ -114,11 +115,21 @@
             this.bnt_AddBook.UseVisualStyleBackColor = true;
             this.bnt_AddBook.Click += new System.EventHandler(this.bnt_AddBook_Click);
             // 
+            // lbl_Error
+            // 
+            this.lbl_Error.AutoSize = true;
+            this.lbl_Error.Location = new System.Drawing.Point(215, 192);
+            this.lbl_Error.Name = "lbl_Error";
+            this.lbl_Error.Size = new System.Drawing.Size(36, 16);
+            this.lbl_Error.TabIndex = 10;
+            this.lbl_Error.Text = "Error";
+            // 
             // BookMng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 261);
+            this.ClientSize = new System.Drawing.Size(463, 277);
+            this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.bnt_AddBook);
             this.Controls.Add(this.cb_SelectAuthor);
             this.Controls.Add(this.txt_Year);
@@ -147,5 +158,6 @@
         private System.Windows.Forms.TextBox txt_Year;
         private System.Windows.Forms.ComboBox cb_SelectAuthor;
         private System.Windows.Forms.Button bnt_AddBook;
+        private System.Windows.Forms.Label lbl_Error;
     }
 }

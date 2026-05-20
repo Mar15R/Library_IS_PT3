@@ -67,6 +67,26 @@ namespace Library_IS.Forms
                         }
                     }
                 }
+                if (e.RowIndex >= 0)
+                {
+                    BookView book = (BookView)gv_Books.Rows[e.RowIndex].DataBoundItem;
+                    if (e.ColumnIndex == gv_Books.Columns["btnUpdate"].Index)
+                    {
+                        using (BookMng popup = new BookMng(book.ID_Book))
+                        {
+                            popup.StartPosition = FormStartPosition.CenterParent;
+                            popup.ShowDialog();
+                            if (popup.DialogResult == DialogResult.OK)
+                            {
+                                ReloadBooks();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Problems with camp Deletion...");
+                            }
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -80,11 +100,14 @@ namespace Library_IS.Forms
             try
             {
 
-                using (BookMng popup = new BookMng())
+                using (BookMng popup = new BookMng(null))
                 {
                     popup.StartPosition = FormStartPosition.CenterParent;
                     popup.ShowDialog();
-
+                    if (popup.DialogResult == DialogResult.OK)
+                    {
+                        ReloadBooks();
+                    }
 
                 }
             }

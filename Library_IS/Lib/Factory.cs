@@ -158,6 +158,25 @@ namespace Library_IS.Lib
             }
             catch { throw; }
         }
+
+        public bool UpdateBook(Book book)
+        {
+            try
+            {
+                var existingBook = repo.GetEntityById<Book>(book.ID_Book);
+                if (existingBook == null)
+                {
+                    return false;
+                }
+                existingBook.Book_Name = book.Book_Name;
+                existingBook.ISBN = book.ISBN;
+                existingBook.Year = book.Year;
+                existingBook.ID_Author = book.ID_Author;
+                repo.UpdateEntity(existingBook);
+                return true;
+            }
+            catch { throw; }
+        }
     }
   
 
