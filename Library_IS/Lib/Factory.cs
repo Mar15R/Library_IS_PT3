@@ -148,6 +148,16 @@ namespace Library_IS.Lib
             }
             catch { throw; }
         }
+
+        public bool AddBook(Book book)
+        {
+            try
+            {
+                repo.InsertEntity(book);
+                return true;
+            }
+            catch { throw; }
+        }
     }
   
 
