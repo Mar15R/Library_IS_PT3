@@ -44,8 +44,8 @@ namespace Library_IS.Services
                 return new Result<User>
                 {
                     Data = null,
-                    ErrorMessage = "An error occurred during authentication.",
-                    InnerExceptionMessage = ex.Message
+                    ErrorMessage = ex.Message ?? "An error occurred during authentication.",
+                    InnerExceptionMessage = ex.InnerException?.Message
                 };
             }
         }

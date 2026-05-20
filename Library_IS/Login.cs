@@ -42,8 +42,8 @@ namespace Library_IS
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            string userName = txt_Username.Text;
-            string password = txt_Password.Text;
+            string userName = txt_Username.Text.Trim();
+            string password = txt_Password.Text.Trim();
 
 
             if (userName != "" && password != "")
@@ -78,7 +78,7 @@ namespace Library_IS
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password.", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(user.ErrorMessage, "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -91,7 +91,6 @@ namespace Library_IS
         {
             txt_Username.Text = "KarlisO";
             txt_Password.Text = "Parole123";
-
         }
     }
 }
