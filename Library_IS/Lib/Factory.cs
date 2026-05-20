@@ -126,6 +126,15 @@ namespace Library_IS.Lib
             }
             catch { throw; }
         }
+
+        public bool DeleteBook(long bookId)
+        {
+            try
+            {
+                return repo.DeleteEntityById<Book>(bookId);
+            }
+            catch { throw; }
+        }
     }
   
 

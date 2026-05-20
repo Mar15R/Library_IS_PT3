@@ -42,6 +42,7 @@
             this.gv_Books.RowTemplate.Height = 24;
             this.gv_Books.Size = new System.Drawing.Size(1096, 288);
             this.gv_Books.TabIndex = 0;
+            this.gv_Books.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_Books_CellContentClick);
             // 
             // btn_AddBook
             // 
